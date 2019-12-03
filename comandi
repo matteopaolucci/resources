@@ -1,0 +1,483 @@
+cat serve a stampare sulla console le righe di un file di testo.
+
+dmesg e lspci stampano diverse componenti del tuo pc come le schede di rete ecc.
+in particolare lspci ti fa vedere solo le periferiche attaccate ai bus pci
+è
+echo xxxx >> xxx.txt permette di creare un file e di inserirci una stringa
+oppure può inserire una nuova riga dentro
+
+echo -e "xxxx" permette di inserire i caratteri speciali \n ecc.
+
+echo -n "xxxx" permette di stampare una riga senza andare a capo (utile con 
+read nei bash script)
+
+cat >> xxx permette di inserire righe multiple in un file o se non esiste
+lo crea
+
+mv xxxx xxxx pertmette di rinominare un file
+
+find -iname xxxx permette di trovare un file (se si inserisce all'inizio o
+alla fine del file un * verranno trovati i file di cui si ricorda solo
+parzialmente il nome)(se seguito da -exec comando '{}'(rappresenta il
+file trovato) ';' permette di eseguire il comando sul file trovato)
+(-delete permette di eliminare il/i file trovati !ATTENZIONE!)
+(se si deve inserire il risultato come parametro in un altro comando
+usare -fprint0 dopo tutto il comando)
+
+rm -rf permette di rimuovere qualsiasi file o cartella contenente files
+
+cp -r xxxx permette di copiare file o cartelle
+
+apropos "xxxxx xxxxx" permette di cercare programmi che come
+descrizione hanno "xxxxx xxxxx"
+
+dpkg -l elenca tutti i programmi presenti nel computer
+
+apt-cache search xxxxx permette di cercare programmi che come descrizione hanno 
+la parola chiave xxxxx
+
+ps -acx mostra tutti i processi attivi sul computer (ps aux mostra tutte le
+informazioni disponibili su tutti i processi)
+
+kill xxxx permette di terminare il processo che come numero ha xxxx
+
+^l ha la stessa funzionalità di clear nel bash
+
+file xxxx mostra il tipo del file xxxx
+
+cat xxxx xxxx >> xxxx permette di concatenare due file e di salvare l'output
+in in altro file
+
+less xxxx permette di vedere il contenuto in un file e scorrerlo con le
+frecce direzionali per terminare il comando basta premere q
+
+comando | less mostra il risultato del comando tramite il comando less
+
+comando >> xxx inserisce nel fondo del file xxx il risultato del comando
+
+comando 2> xxx crea il file xxx e ci inserisce lo stderr
+
+XXX = valore permette di impostare una variabile
+ 
+se si vuole usare il risultato di un comando come argomento per un
+altro comando digitare: "comando $(comando)" oppure: 
+"comando | xargs comando" così facendo il primo comando viene utilizzato
+come argomento nel secondo comando(se nel risultato del primo comando ci sono
+degli spazi vuoti usare --null subito dopo xargs e poi digitare il resto del
+comando
+
+env permette di visualizzare le variabili attive ed i loro valori
+
+tail stampa le ultime dieci righe di un file mentre head le prime 10
+
+{x..y} permette di inserire tutti i numeri che vanno da x a y oppure
+tutte le lettere che vanno dalla lettera x alla lettera y sia nel senso giusto
+che in quello inverso come dalla A alla Z oppure dalla Z alla A (la stessa
+cosa vale per i numeri)
+
+env | grep HOME | less permette di visualizzare la variabile home nel
+comando less perchè è l'ultimo della pipeline
+
+xxxx $(xyz) cosi si può dare come parametro di un comando il valore 
+restituito dal comando xyz
+
+alt+l permette di trasformare i carattare dopo il cursore in minuscoli
+mentre alt+U permette di trasformare i caratteri dopo il cursore in 
+MAIUSCOLI
+
+ctrl+U permette di eliminare i caratteri prima del cursore
+mentre ctrl+K quelli dopo
+
+!xxx permette di usare il comdando salvato nella cronologia di history 
+alla linea xxx
+
+history mostra gli ultimi comandi inseriti
+
+'CTRL-R' permette di ricercare comandi gia inseriti. Per cercare un'altro match 
+si può ridigitare CTRL-R finche ce ne sono.
+'CTRL-SHIFT-R' permette di scorrere nel senso inverso)
+
+'#' permette di inserire dei commenti anche durante l'inserimento dei comandi 
+nella shell. Questo può essere utile per assegnare dei tag a dei comandi e poi 
+reperirli con CTRL-R <tag>
+
+ctrl+R <espressione>  permette di cercare tramite un espressione i comandi gia 
+utilizzati
+
+chmod +t cartella permette ai file della cartella di essere modificati ma 
+non di essere cancellati dai non possessori della cartella
+
+top permette di viusalizzare tutti i processi in corso con tutti i dettagli
+e l'output si aggiorna ogni 3 secondi
+
+per far partire un programma e metterlo subito in background si può mettere
+una & dopo il nome del comando/programma. Fatto ciò il terminale ci risponde
+con il job del comando/programma e il suo PID
+
+bg %x serve a mettere in background il job n° x; mentre fg %x serve a 
+riportare in foreground il job n° x (dopo aver stoppato un applicazione con 
+'CTRL-Z' si può digitare 'bg' senza '%x' per farla ripartire in background)
+
+/home/xxx/.bashrc imposta le variabili di ambiente e gli alias
+
+'alias' è un comando che se lanciato a vuoto mostra gli alias impostati e 
+permette inoltre di settarli
+
+$PS1 è la variabile che contiene la parte iniziale di ogni comando nella
+shell che identifica l'utente e dove ci troviamo (ex jd@localhost:~$)
+
+apt-cache show xxxx permette di sapere di più sul comando/programma
+xxxx (per delle informazioni stringate usare whatis xxxx)
+
+per installare un programma scaricato digitare dpkg --install nome_pacchetto
+
+tail -f /var/log/messages permette di vedere in tempo reale cosa sta 
+succedendo nel sistema
+
+df -x tmpfs -h permette di vedere tutte le memorie di 
+massa installate, dove si trovano i file al loro interno
+(mounted on) e vari dati sul loro spazio
+
+dd if=input_file of=output_file permette di copiare dati
+o creare immagini o montare immagini. Come input si
+possono dare sia dei dischi(dev/sda,/dev/sdb), sia dei file (anche ISO).
+Nell'output_file possiamo inserire o dischi quindi copiare un 
+disco su un altro/montare un immagine iso oppure creare immagini
+anche avviabili tipo img o iso ecc.
+
+ip a o netstat -ie se eseguiti mostrano le interfaccie usate
+per la rete e i relativi dettagli tra cui il MAC
+
+wget URL permette di scaricare le pagine web oppure file se l'indirizzo è
+ftp://...
+
+firefox "file.php/html..." permette di aprire via bash una pagina di tipo
+html, php ecc. in firefox
+
+per sapere di più su un file digitare stat file
+
+touch -t (AAAAMMGGHHMM.SS) file permette di cambiare ad un file i tempi
+di modifica e di accesso (se serve cambiare anche il Change time bisogna
+seguire i seguenti passaggi: prima bisogna disabilitare la sincronizzazzione 
+con il server NTP con: timedatectl set-ntp 0; poi bisogna impostare una nuova
+data e ora per il sistema con: timedatectl set-time YYYY-MM-DD HH:MM:SS 
+oppure se si vuole cambiare solo l'ora: timedatectl set-time HH:MM:SS;
+infine bisogna usare touch sul file e reimpostare la sincronizzazzione con
+il servr NTP: timedatectl set-ntp 1) 
+
+tar permettette di creare archivi di file digitando: tar cf nome_finale.tar 
+nome_cartella_da_cui_creare_archivio. Per estrarre un archivio è necessario
+digitare tar xf nome_archivio per estrarlo nella cartella corrente
+(per creare o estrarre un archivio compresso mettere j (bzip) o z (gzip) nel
+mezzo tra cf o xf)
+
+FILTRI:
+
+grep permette di filtrare il risultato di un comando tramite piping ad esempio
+per filtrare un comando ls tramite la parola dir digitare: ls | grep dir.
+(se si vuole filtrare per un parametro digitare egrep "?-x" oppure "\-x")
+(se si vuole usare come filtro dei caratteri speciali usare fgrep)
+(se si vuole usare come filtro tutti i carattari maiuscoli usare grep [A-Z],
+tutti i caratteri minuscoli [a-z], tutti i numeri [0-9], tutti i caratteri che
+non corrispondono a certi caratteri [^xyz], che iniziano per certi caratteri
+^[xyz], che iniziano per una certa espressione ^xyz, che finiscono per certi
+caratteri[xyz]$, che finiscono per una certa espressione xyz$, che nella riga
+contengono una certa parola ?xyz.?)
+(per filtrare tramite or ditare grep xxx|yyy|zzz)
+(per filtrare un espressione in base al numero di volte (y) che compare una
+certa espressione digitare: egrep ?[xxx]{y} oppure se compare minimo un numero
+di volte: egrep ?[xxx]{n,} oppure un massimo di volte: egrep ?[xxx]{,n} oppure
+entro un certo range: egrep ?[xxx]{n,m}) (per impostare nel filtro un crattere 
+opzionale digitare dopo il carattere ? oppure un espressione opzionale con * 
+preceduto da un identificatore generico[[:alpha:]][0-9])
+
+per filtrare con less digitare /filtro
+
+per filtrare conf find digitare find -regex "filtro" 
+
+FINE FILTRI
+
+sort permette di ordinare le righe di uno o più file per ordine alfabetico
+(-k permette di filtrare per un certo parametro all'interno di una riga,
+ogni parametro è distanziato da lo spazio o TAB quindi ad esempio in 1 2
+2 è il secondo parametro e per usarlo come filtro bisogna digitare -k 2.
+Per usare più parametri come filtro usare -k x,y cioè dal parametro x a quello
+y oppure si può filtrare prima per un parametro e poi per un altro inserendo
+più volte -k x. Inoltre se si vuole filtrare per un parametro ma non da il suo
+inizio si può digitare -k x.y cioè iniziare a filtrare dal y carattere del x
+parametro. Se si vuole cambiare il carattere che divide un parametro 
+dall'altro digitare -t 'xyz')
+(per eliminare le righe doppie concatenare a sort | uniq
+per vedere le linee righe -c)
+
+du xxxxx permette di sapere quato pesa un file o una directory xxxxx
+(per le directory usare -s, per cambiare unita di misura difitare -BMB -BKB.. 
+oppure -h semplicemente; se si vuole vedere le dimensioni delle cartelle a un 
+livello di profondità digitare '-d 1')
+
+diff permette di trovare le differenzew tra due file ordinati tramite sort
+(per leggere meglio le differenze usare -c o -u)
+(insieme al comando patch permette di trasformare un file vecchio in uno nuovo
+per fare ciò bisogna digitare: diff -Naur file_vecchio file_nuovo > file_patch
+| patch < file_patch)
+
+tr permette di "trasformare" il testo cioè ad esempio permette di trasformare
+le maiuscole in minuscole o viceversa oppure attuare delle codificazioni come
+la ROT13 digitando tr a-zA-Z n-za-mN-ZA-M < file_da_codificare/decodificare.
+Permette cioè di effettuare delle translitterazioni tramite pattern fissi.
+(permette di eliminare i caratteri attaccati ripetuti con il parametrp -s
+caratteri di cui eliminare le "doppie")
+
+sed è un "editor di flusso" che permette di filtrare e trasformare testi
+il comando più semplice serve a sostituire una parola con un altra:
+sed s/xxx/yyy/ se ci sono più istanze da sostituire inserire una g dopo 
+l'ultimo /. Per effettuare un comando su una determinata riga scrivere un 
+numero prima del comando (ex. 1s, 23s ...) oppure da una riga ad un altra 
+(ex. 1,2s ...) oppure tutte le righe eccetto una o più di una 
+(ex. 1!s 1,2!s ...) per stampare certe righe digitare sed -n x,xp
+Per modificare direttamente un file, digitare: sed -i comando file
+(per una guida più dettagliata visitare http://www.grymoire.com/Unix/Sed.html)
+
+aspell check file permette di controllare la correzzione grammaticale di un
+file o tipi di file specifici come codici HTML, C, C++..(vedere le opzioni)
+
+| nl permette di numerare le righe di un file o un testo per numerare anche
+le righe vuote usare | nl -b a
+
+fold permette di cambiare la lunghezza delle righe di un file che di default è 
+80 ma se si vuole impostare una lunghezza specifica si deve usare fold -w 
+numero_caratteri (usare -s per non dividere le parole)
+
+pr -l x -w y permette di suddividere un file in più pagine per la stampa -l 
+permette di definire la lunghezza di una pagina cioè le linee; mentre -w la 
+larghezza cioè il numero di caratteri in ogni linea
+
+pr permette di preparare un file alla stampa e di solito è usato tramite 
+pipeline
+
+lpstat -a permette di sapere il nome di tutte le stampanti configurate sul PC
+
+lpadmin permette di gestire le stampanti (disponibile solo al super user)
+per aggiungere una stampante ad un determinato utente digitare lpadmin -U 
+utente -d  nome_stampante
+
+lpr permette di stampare o tramite pipeline o tramite file
+
+lpq permette di vedere la coda di stampa
+
+cancel xxx permette di cancellare dalla coda di stampa il job xxx che si può 
+ottenere tramtite lpq
+
+quando si tenta di usare umount ma come risultato da: device is busy, si deve 
+digitare: fuser -m /dev/xxx per capire in quale processo è impegnato il 
+dispositivo. Ottenuto il numero del processo digitare ps aux | grep n_processo 
+per 
+vedere che applicazione sta impegnando il dispositivo e chiuderla
+
+nella cartella /usr/include sono contenute le librerie condivise per C e C++
+
+INSTALLARE PROGRAMMI TRAMITE CODICE SORGENTE:
+
+Per installare un programma tramite codice sorgente dobbiamo prima scaricare il 
+file dal sito veriificare il file con gpg --verify xxx.sig (se presente) (nel 
+caso importare la chiave con gpg --import chiave). 
+Estrarre il file con tar (verificare prima con tar tzvf o tjvf che 
+estraendolo crei una cartella per non fare confusione, altrimenti creare una 
+cartella e poi estrarlo). Una volta estratto il file leggere attentamente i 
+file README e INSTALL prima di procedere. Digitare ./configure poi make poi 
+make check e se tutto va bene digitare sudo checkinstall per creare un pachetto 
+debian. (Per disintallare il pachetto creato digitare dpkg -r nome_pacchetto)
+
+Per aggiungere un parametro a una variabile di .bashrc digitare: export 
+VARIABILE=valore. Per far ripartire la shell con il nuovo .bashrc digitare: . 
+~/.bashrc
+
+Per digitare il carattere ~ usare la seguente combo: premere Ctrl + Shift + u e 
+una volta che sarà apparsa una u sottolineata mantenere premuto Shift e 
+premere prima 7 e poi E
+
+I programmi devono essere inseriti in diverse directory in base agli utenti che 
+li andranno a utilizzare:
+ -utente locale: ~/bin
+ -utenti in generale: /usr/local/bin
+ -amministratore: /usr/local/sbin 
+
+Per continuare a scrivere un comando andando a capo in bash bisogna inserire le 
+virgolette (") e non chiuderle alla fine del comando; quando tutto il comando 
+è completamente scritto alla fine dell'ultima riga reinserire le virgolette 
+(") e premere invio per eseguire il comando
+
+read xxx permette di inserire nella variabile xxx quello che viene scritto 
+succesivamente come standard input (si possono inserire asseganre anche più 
+variabili alla volta scrivendo read xxx yyy zzz; per assegnare ciascun valore a 
+ciascuna variabile bisogna inserire nella riga seguente i valori separati da 
+uno spazio, cioè: la prima stringa viene assegnata alla prima variabile, la 
+seconda stringa dopo lo spazio alla seconda variabile e cosi via)
+
+read -p "xxxxx" inserisce il testo xxxxx prima di permettere l'inserimento di 
+un valore
+
+read -s permette di non stampare i caratteri digitati (uile per inserimento di 
+passwords)
+
+read -t x permette all'utente di inserire i caratterri entro il tempo x 
+(secondi)
+
+read -i xxx permette di inserire xxx se l'utente si limita a premere invio 
+senza digitare niente
+
+$REPLY è la variabile standard in cui viene salvato la stringa inserita dopo 
+read
+
+IFS="x" read var1 var2 var3; permette di cambiare il carattere che separa il 
+contenuto di ciascuna variabile, quindi invece di usare lo spazio come 
+carattere separatore verrà utilizzato il carattere x
+
+negli script di bash si devono usare le parentesi quadre [] invece che quelle 
+tonde
+
+basename xxx permette di ottenere l'ultimo elemento presente in un file path
+
+"${xxx}" permette di inserire il valore di una variabile all'interno di una 
+stringa
+
+var+=xxx permette di aggiungere alla variabile $var i caratteri xxx
+
+declare -r XXXX=xyz permette di impostare una costante che non può essere 
+cambiata
+
+si possono impostare più variabili sulla medesima riga
+
+xxx=$((6 + 3)) permette di assegnare alla variabile xxx la somma di 6 e 3
+
+echo $? permette di sapere se l'ultimo comando o script usato è andato a buon 
+fine. Se il risultato è 0 allora il comando\script è corretto altrimenti se 
+è un altro numero vuol dire che c'è stato un errore
+
+comando1 && comando2 esegue il secondo comando solo se il primo è riuscito
+
+comando1 || comando2 esegue il secondo comando solo se il primo è fallito
+
+il superuser a come id numerico sempre 0 quindi per verificare ad esempio se 
+uno script è stato eseguito da un amministratore possiamo creare il segueente 
+test if [ "$(id -u)" -eq 0 ] then...
+
+il comando continue all'interno di un ciclo in uno script permette di far 
+ripartire il ciclo saltando il codice successivo (si puo usare con un while 
+true assieme al break per continuare o terminare il ciclo)
+
+until è l'opposto del ciclo while cioè esce dal ciclo quando la condizione è 
+vera
+
+quando negli script (con i sistemi unix o unix-like) si usa * o ? per 
+individuare certi file; si dovrebbe mettere prima di + o ? ./ per identificare 
+la directory corrente perchè se ad esempio esiste un file -rf nella cartella e 
+noi eseguiamo rm * il file -rf andra a far parte dell'argomento per poi 
+eliminare anche tutte le cartelle e sottocartelle presenti nella directory
+
+per la portabilità di un file è sconsigliato che un file inizi con -
+
+l'espressione  #!/bin/bash -x permette di attivare il tracing in uno script; 
+cioè viene visualizzato nel bash cosa sta effettivamente facendo ciascuna riga 
+nello script (il "+" del tracing è contenuto nella variabile PS4 e può essere 
+modificato a piacimento; ad esempio '$LINENO + ' a seconda della linea scrivera 
+1 + comando)
+
+si può usare anche inserire una porzione di scitpt tra set -x e set +x per 
+attivare il tracing soltanto in quell'intervallo
+
+/etc/dictionaries-common/words contiene tutte le parole del dizionario 
+inglese(utile assieme a grep per trovare parole nel gioco dell'impiccato o 
+simili)
+
+ssh user@host -p <port> -Y permette di accedere tramite la porta <port> al 
+servizio ssh inoltre con -Y permette di aprire in locale i programmi con 
+interfaccia grafica
+
+nc -lvp <porta> permette di rimanere in ascolto su una certa porta (-l listen, 
+-v verbose, -p <porta)
+
+nc <ip> <porta> -e /bin/sh permette di far accedere alla propria shell dal pc 
+che ha come ip <ip> e sta ascoltando sulla porta <porta>
+
+passwd permette di gestire le password
+
+awk '{print}' <file> permette di stampare un file, se dopo print inseriamo $x 
+verra stampata la x colonna del file (ogni colonna di default
+è separata da spazi); se si vuole applicare un filtro alla print bisogna 
+inserire prima delle parentesi graffe /<filtro>/; se si vuole
+cambiare il separatore di default si deve usare l'opzione -F <separatore>
+
+crontab -e permette di modificare un file che al suo interno contiene delle 
+righe di codice che vengono eseguite periodicamente secondo lo
+schema: Minute Hour "Day of month" Month(1-12) "Day of the week (1-7)" command
+Al posto dei numeri si può inserire il carattere '*' che sta a significare 
+qualsiasi (ovviamente non si può inserire nel parametro command) 
+e inoltre ogni campo deve essere separato da uno spazio, per indicare un range 
+di mesi, giorni ecc. utilizzare '-' mentre per indicare
+una lista usare ','
+/etc/crontab contiene le operazioni che cron esegue periodicamente sull' intero 
+sistema
+crontab -l permette di visualizzare il file crontab dell'utente attuale
+
+cd - ti riporta all'ultimo percorso precedente all'attuale
+
+'cd' senza argomenti ti riporta alla home
+
+sudo !! permette di eseguire l'ultimo comando inserito con i permessi di 
+amministratore
+
+tldr <comando> produce una pagina di aiuto del comando molto semplificata 
+rispetto a man <comando>
+
+reset permette di resettare il terminale nel caso in cui qualcosa non funzioni
+
+evince <file> permette di leggere file di vario tipo doc, pdf, ecc.
+
+[sudo] lsblk elenca gli hard disk con le relative partizioni e i relativi punti 
+di montatura
+
+fsck -p <partizione> controlla la partizione indicata e ne ripara gli eventuali 
+errori (prima si deve smontare {umount <partizione>} la partizione)
+
+gdb [--args] <eseguibile> [<args>] permette di debuggare un programma c 
+compilato con l'opzione -g. Se si vogliono passare degli argomenti si deve 
+anteporre il parametro --args al nome dell'esegguibile c e posporre all' 
+eseguibile i parametri 
+
+networkctl status : permette di vedere le interfacce di rete e i relativi 
+indirizzi ip in modo molto più chiaro rispetto ad ip a
+
+'declare -p' mostra una serie di variabili tra cui anche quelle locali
+
+'sudo fdisk -l' mostra i dischi installati nel pc e le relative partizioni
+e delle informazioni generali sul filesystem 
+
+'journalctl -u[f](per f è come tail continua in tempo reale) <service>' 
+permette di seguire/visualizzare i log di un certo servizio (senza f per 
+continuare premere spazio e per uscire 'q')
+
+in /var/log/ sono contenuti i log principali del sistema
+
+'ALT-SHIFT-/' permette di andare alla fine di un file di nano
+
+'sudo apt purge <programma>' è come remove, ma rimuove anche i file di 
+configurazione
+
+'cut -d "<delimiter>" -f <n> ' permette di stampare a video il campo <n> di 
+linee di testo separate in base al <delimiter> 
+
+se capita che il termiale si impalli perchè hai premuto 'CTRL-s' premere 
+'CTRL-q' per far si che riparta
+
+'find / -type f -exec grep -H 'text-to-find-here' {} \;' permette di cercare 
+all' interno di tutto il file system i file contenenenti la stringa '..text..'
+al posto di grep si può inserire qualsiasi comando
+(-H serve a stampare il file in cui è contenuta la stringa trovata)
+
+'mkdir `date +%F`' permette di creare una cartella che ha il nome della data 
+corrente yyyy-mm-dd
+
+'eog <img>' visualizza l' immagine <img>
+
+'exec bash' permette di ricaricare la il terminale e quindi anche .bashrc

@@ -1,0 +1,28 @@
+r/run permette di far partire il programma
+
+start permette di far partire il programma dal main
+
+^xa/layout next permette di visualizzare il codice del programma
+
+p/print [<variabile>] stampa il valore dell' ultima variabile modificata
+
+[<*>]<variabile>[@<elementi_array>] permette di vedere il/i valore/i del/la puntatore/variabile/array_multidimensionale di elementi <elementi_array>
+
+n/next permette di andare avanti di una riga
+
+s/step permette di entrare in una funzione se chiamata nella riga
+
+f/finish permette di uscire da una funzione
+
+q/quit permette di chiudere il debugger
+
+b/break <nome funzione> imposta un brake point all'inizio di una funzione
+
+set args <argomenti> permette di impostare gli argomenti da passare al main
+
+^p/n permette di scorrere i comandi inseriti
+
+info locals stampa le variabili locali
+
+p <variabile> = <valore> permette di assegnare da gdb un valore ad una
+variabile

@@ -1,0 +1,46 @@
+Argomenti usati come test negli if tra le parentesi quadre "[]"
+
+FILE:
+
+file1 -nt file2: il file 1 è più recente rispetto a file2(-ot è l'opposto)
+-d file: il file è una directory
+-e file: il file esiste
+-g file: il file esite ed è settato il group ID
+-G file: il file è posseduto dal effettivo group ID
+-k file: il file ha impostato lo "sticky bit"(cartelle condivise)
+-O file: il file appartiene all'effettivo user ID
+-r file: il file è leggibile (chmod)
+-s file: il file non è vuoto
+-w file: il file è scrivibile (chmod)
+-x file: il file è eseguibile (chmod)
+-u file: il file è setuid
+
+STRINGHE:
+
+string: è vero se la variabile string non è di tipo null
+-n string: la lunghezza della stringa è maggiore di zero
+-z string: la lunghezza della stringa è zero
+string1 = (o ==) string2: le due stringhe sono uguali
+string1 != string2: le due stringhe sono diverse
+
+INTERI:
+
+int1 -eq int2: i numeri sono uguali
+int1 -nt int2: i numeri sono diversi
+int1 -le int2: int1 è minore o uguale rispetto a int2
+int1 -lt int2: int1 è minore rispetto a int2
+int1 -ge int2: int1 è maggiore o uguale rispetto a int2
+int1 -gt int2: int1 è maggiore rispetto a int2
+$(( int1 % 2 )) -eq 0: int 1 è pari (se ritorna false è dispari)
+
+usando le doppie parentesi quadre [[]] possiamo confrontare una variabile e un 
+espressione regolare scrivendo var =~ regex ( == permette di confrontare due 
+pathnames)
+
+usando le doppie parentesi tonde (()) possiamo conrontare degli interi come 
+negli altri linguaggi
+
+per combinare più test si possono usare gli operatori booleani AND (-a oppure 
+&& tra doppie parentesi), OR (-o oppure || tra doppie parentesi) e NOT (!)
+
+p

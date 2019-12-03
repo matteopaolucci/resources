@@ -1,0 +1,224 @@
+VIM è un editor molto complicato che permette di creare programmi
+ed editare più file contemporaneamente (scrivendo vim file1
+file2 ...)
+
+il suo file di configurazione è nella home ed è .vimrc
+
+per uscire da VIM digitare :q (se un file è stato
+modificato ma non si vuole salvare la modifica
+premere :qa!)
+
+per modificare un file digitare :e nome_file 
+(possono essere modificati più file contemporaneamente;
+vedi :buffers)
+
+per salvare un file digitare :w (è come save as quindi
+se dopo :w viene digitato un nome, verrà creato un altro file
+ma si continuerà a modificare il file precedente)
+
+per salvare un file e uscire digitare ZZ
+
+per inserire dei caratteri premere i
+
+per inserire dei caratteri a fine riga premere A
+
+per inserire una riga dopo la riga su cui è posizionato
+il cursore premere 'o' mentre per inserire una riga
+prima della riga su cui è posizionato il cursore premere 'O'
+
+premere canc o x per eliminare il carattere situato sul cursore
+
+per cancellare una riga usare dd (i comandi che cancellano i
+caratteri che iniziano con d non li "eliminano" ma li tagliano)
+'diw' cancella la parola su cui si è posizionati (spazi non inclusi)
+'daw' //	//	//	//	//	 (spazi inclusi)
+'di<{/[/(/'/">' cancella le parole all' interno di {}/[]/()/''/""
+'da<{/[/(/'/">' //	//	//	//	//	(parentesi/apici incluse/i)
+
+per copiare usare y ("yank"="copiare")
+
+per copiare una riga premere yy
+
+per copiare una porzione di testo premere 'v' selezionare il testo e in seguito 
+premere y
+
+per incollare dopo una parola usare p; per incollare
+prima di una parola usare P
+
+0 permette di andare all'inizio della riga su cui è posizionato 
+il cursore (puo essere inserto dopo un comando per eseguire
+il comando dal cursore all'inizio della riga)
+
+$ permette di andare alla fine della riga su cui è posizionato
+il cursore (puo essere inserto dopo un comando per eseguire
+il comando dal cursore alla fine della riga)
+
+/xxxxx permette di cercare la parola/espressione xxxxx
+in tutto le righe del file  (per cercare espressioni uguali
+e successive a quella trovata premere n)
+
+:%s/xxx/yyy/gc permette di trovare in tutto il file
+l'espressione xxx e di sostituirla con yyy chiedendo
+la conferma all'utente che dovra rispondere per ogni
+espressione xxx con:
+-y: si
+-n: no
+-a: si per l'espressione attuale e quelle successive
+-q o Esc: interrompono la sostituzione
+-l: fa la sostutuzione dell'espressione e poi interrompe
+la sostutuzione
+se C viene omesso non sarà richiesto niente e verra sostituito tutto
+
+:buffers permette di visualizzare i file aperti in VIM
+(per cambiare file difitare :buffer n_buffer_del_file)
+
+:r xxx permette di inserire tutto il file xxx all'interno
+del file che stiamo modificando
+
+:syntax on facilità la scrittura degli script sottolineando alcune parole
+e comandi
+
+:set hlsearch permette di sottolineare i risultati delle ricerche
+
+:set tabstop=4(ts=4) riduce i caratteri occupati dal TAB a 4 invece di 8
+
+:set sw=4 riduce l'indentamento automatico a 4 spazi
+
+ANNULLAMENTO AZIONI:
+
+'u' permette di annullare l'ultima azione eseguita
+'U' permette di annullare le operazioni eseguite nella riga su cui è il cursore
+CTRL-r permette di rifare la modifica precednetemente annullata con 'u'
+
+MOODALITA' VISUAL:
+
+'v' permette di selezionare del testo:
+	- 'd': permette di eliminare il testo selezionato
+	- 'y': permette di copiare il testo selezionato
+	- '<'; permette di indentare di un tab-opposto il testo selezionato
+	- '>'; permette di indentare di un tab il testo selezionato
+
+'V' è come 'v' ma permette di selezionare delle linee
+
+'CTRL-v' è come 'v' ma permette di selezionare dei blocchi simmetrici
+
+<< permette di spostare di un tab opposto la riga corrente
+>> permette di spostare di un tab la riga corrente
+
+'h' permette di spostare il cursore a sinistra
+'j' permette di spostare il cursore nella riga successiva
+'k' permette di spostare il cursore nella riga precedente
+'l' permette di spostare il cursore a destra
+
+RICERCA:
+
+'/' permette di cercare una certa espressione nel file, una volta trovata una
+corrispondenza si può digitare 'n' per vedere se ce ne è una dopo altrimenti 
+'N' per vedere se ce ne è una prima
+'?' fa la stessa cosa ma cerca nel verso opposto
+
+'CTRL-O' permette di tornare alla posizione precedente alla ricerca mentre
+'CTRL-I' fa l'opposto
+
+FINE RICERCA:
+
+'%' se premuto quando il cursore è su una parentesi permette di vedere dove
+è la parentesi corrispondente se esiste
+
+'^' permette di andare al primo carattere non spazio della riga
+
+'gg' permette di andare alla prima riga del file
+G permette di andare all'ultima riga del file 
+oppure se si digita un numero prima di G permette di andare a quella riga
+(puo essere inserto dopo un comando per eseguireil comando dal cursore alla fine
+del file)
+
+W permette di andare alla parola successiva al cursore
+(puo essere inserita dopo un comando per eseguire
+il comando sulla parola successiva al cursore)
+
+B permette di andare alla parola precedente al cursore
+(puo essere inserita dopo un comando per eseguire
+il comando sulla parola precedente al cursore)
+
+inserire un numero prima di un comando permette
+di usare il comando per per x volte (ex. 3x cancella
+il carattere su cui è il cursore e i 2 caratteri
+successivi al cursore)
+
+J permette di unire la riga successiva a quella su
+cui è situato il cursore
+
+'b' permette di andare alla parola precedente
+
+'ge' permette di andare alla fine della parola precedente
+
+:set autoindent permette di automatizzare l'indentazione dello script 
+(premere ^d per fermare l'auto-indentazione)
+
+'r' -> 'carattere' permette di sostituire il carattere su cui è posizionato il 
+cursore con 'carattere'
+'R' permette di sostituire dei caratteri a partire dalla posizione del cursore
+premere <Esc> per uscire
+
+':!<comando>' permette di digitare comandi all'interno di vim
+
+':r <file>|<comando>' permette di inserire nella riga posizionata sotta al
+cutsore il contenuto di <file> o l'output del <comando>
+
+:set hls ic is permette di sottolinerae le corrispondenze cercate.
+ic permette di ignorare la differenza tra maiuscole e minuscole
+is permette di trovare trovare le corrispondenze parziali
+per disattivare temporaneamente fino alla prossima ricerca scrivere :noh
+
+più in generale :set no<opzione> disabilità l'opzione
+
+'CTRL-W' permette di switchare tra le finestre aperte in VIM
+
+'CTRL-D' permette di visualizzare le opzioni disponibili quando si sta
+inserendo un comando in VIM (ex. :e CTRL-D mostra i comandi che iniziano
+con e
+
+'b' permette di andare all'inizio dell parola precedente
+
+']m' permette di andare all'inizio del prossimo metodo
+'[m' //		//	//	//	metodo precedente
+']M' permette di andare alla fine del prossimo metodo
+'[M' //		//	//	//	metodo precedente
+
+'H' permette di andare alla prima riga presente in finestra
+'M' permette di andare alla riga nel mezzo della finestra
+'L' permette di andare all'ultima riga della finestra
+
+'[[' permette di andare alla precedente {
+']]' permette di andare alla successiva }
+'{' permette di andare al paragrafo precedente
+'}'	//	//	//	//  successivo
+
+'-' permette di andare al primo carattere non spazioe della riga
+precedente
+'+' //	//	//	//	//	//	//	successiva
+
+'*' permette di cercare in avanti nel testo la parola su cui è 
+posizionato il cursore
+'#' //	//	//	indietro nel testo 	//	//
+
+'CTRL-D' permette di scorrere di mezza finestra in giù
+'CTRL-U' permette di scorrere di mezza finestra in sù
+'CTRL-F' permette di scorrere di una finestra in giù
+'CTRK-B' permette di scorrere di una finestra in sù
+
+'zz' permette di centrare la finsetra sulla linea del cursore
+
+'set fdm=syntax' permette di creare fold automaticamente in base
+al linguaggio che si sta usando
+
+'zm/zM' chiude un livello/tutti i livelli di fold
+'zr/zR' apre un livello/tutti i livelli di fold
+
+'CTRL-]' nell' help di vim ti permette di andare alla definizione
+delle parole scritte in blu
+
+'SHIFT - i' permette di inserire davanti a un blocco selezionato quello che si vuole, una volta inserito premere 'ESC' per applicare la modifica
+
+'c' è come 'd' ma una volta cancellato parte la INSERT mode

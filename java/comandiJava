@@ -1,0 +1,16 @@
+'java.util.Arrays.toString(<arrayName>)' stampa tutti i valori di un array
+
+'Integer.toString(<String>)' converte una stringa in intero
+
+'java.util.Random: <random>.nextInt(<int>)' permette di generare un numero 
+random da 0 a <int>
+
+'<type>[] = {<elems>}' permette di istanziare array in maniera più compatta
+
+'javac -d <dir> <*.java>' permette di compilare i file in <dir>
+
+'javac -cp <classPath> <*.java>' permette di compilare files richiedenti altre 
+classi contenuti in <classPath> (se ci sono problemi di compilazione provare ad
+inserire <classPath> tra ") (Se si vogliono inserire più <classPath> separarli
+senza spazi e con ':' in Linux e ';' in Windows)
+
