@@ -481,3 +481,5 @@ corrente yyyy-mm-dd
 'eog <img>' visualizza l' immagine <img>
 
 'exec bash' permette di ricaricare la il terminale e quindi anche .bashrc
+
+'CTRL-ALT-F3' nella schermata di login apre la console
