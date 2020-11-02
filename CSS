@@ -1,0 +1,55 @@
+'<selettore>:hover' è una pseudoclasse che permette di cambiare il CSS
+quando il mouse è poszionato sopra <selettore>
+
+'margin' definisce la distanza tra il box corrente e gli altri box
+
+'padding' definisce la distanza tra il contenuto del box e i limiti del box
+
+'display' modifica il layout del box e può avere 4 valori:
+
+	-inline: l'oggetto può stare affianco ad un altro ma non ha la propietà 
+	  width
+
+	-block: l'oggetto occupa l'intera larghezza della pagina e può essere
+	  modificato con la propietà width
+
+	-inline-block: ha sia le propietà di 'inline' che di 'block'
+
+	-none: nasconde l'oggetto ('visibility:hidden' ha lo stesso effetto ma
+	  mantiene la dimensione del box dell'oggetto)
+
+'position:relative' permette di spostare i box tramite le seguenti istruzioni
+	relativamente alla posizione originale del box:
+	
+	-bottom: sposta l'oggetto di x px verso su
+	
+	-top: sposta l'oggetto di x px verso giù
+	
+	-left: sposta l'oggetto di x px verso destra
+	
+	-right: sposta l'oggetto di x px verso sinistra
+
+'position: absolute' come sopra ma il box si sposta relativamente al box padre
+	(se non esiste è sottointeso il body)
+
+'position: fixed' è come absolute ma se il box padre è il body anche scorrendo
+	lo schermo la posizione non cambia (utile per le navbar)
+
+'text-align: center/...' permette di allineare tutti i box di testo di
+	allinearsi (per le immagini o se width è impostato vedi sotto)
+
+per allineare al centro altri elementi che non siano testo è opportuno impostare
+	'display: block' e 'margin: auto'
+
+'font-family: <font>' cambia il font del testo all'interno del selettore
+
+'fonts.google.com' permette di selezionare dei font ed essere sicuri al 100%
+	che il browser li renderizzi correttamente (una volta selezionati andare
+	nella finestra embed in cui ci sono già pronti il codice HTML e CSS)
+
+'border-radius: 100%' rende il selettore circolare
+
+quando si va ad impostare 'font-size' è meglio utilizzare come unità di misura
+'rem' dove 1 rem equivale a 16px (valido solo dal CSS3)
+
+'float: right/left' permetta ad un selettore di essere circondato da testo

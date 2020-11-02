@@ -215,11 +215,13 @@ du xxxxx permette di sapere quato pesa un file o una directory xxxxx
 oppure -h semplicemente; se si vuole vedere le dimensioni delle cartelle a un 
 livello di profondità digitare '-d 1')
 
-diff permette di trovare le differenzew tra due file ordinati tramite sort
+diff permette di trovare le differenze tra due file ordinati tramite sort
 (per leggere meglio le differenze usare -c o -u)
 (insieme al comando patch permette di trasformare un file vecchio in uno nuovo
 per fare ciò bisogna digitare: diff -Naur file_vecchio file_nuovo > file_patch
 | patch < file_patch)
+
+'diff -rq <dir1> <dir2>' permette di comparare due directory 
 
 tr permette di "trasformare" il testo cioè ad esempio permette di trasformare
 le maiuscole in minuscole o viceversa oppure attuare delle codificazioni come
@@ -483,3 +485,31 @@ corrente yyyy-mm-dd
 'exec bash' permette di ricaricare la il terminale e quindi anche .bashrc
 
 'CTRL-ALT-F3' nella schermata di login apre la console
+
+'usb-creator-gtk' permette di masterizzare iso su pennette usb e renderle
+avviabili
+
+ALT-GR + ì producono la ~
+
+se si vuole eseguire uno script bash da desktop, basta aggiungere al file dello 
+script l' estensione '.command'
+
+'./source <comando/script>' permette di eseguire <comando/script> senza creare 
+una subshell (!ATTENZIONE! la shebang line non viene utilizzata)
+
+'xmodmap' mostra a che tasti della tastiera corrispondono mod1 ecc.
+
+'!$' è come !! ma solo l'argomento
+
+'$RANDOM' contiene un numero random diverso ogni volta che viene chiamato
+
+'xwininfo' permette di sapere di più su una finestra aperta
+
+':w !sudo tee %' permette di salvare un file del su anche se inizialmente lo si 
+ha aperto come utente (% è uno simbolo di vim che viene sostituito con il nome 
+del file attuale)
+
+'help <built-in command>' stampa le informazioni relative al comando built-in
+del file corrente)
+
+'%' fa riitornare in foreground l'ultimo comando messo in background
