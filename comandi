@@ -513,3 +513,5 @@ del file attuale)
 del file corrente)
 
 '%' fa riitornare in foreground l'ultimo comando messo in background
+
+'info' è un' altro comando per ricevere informazioni e aiuto su vari comandi
