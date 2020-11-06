@@ -102,6 +102,9 @@ MOODALITA' VISUAL:
 
 'CTRL-v' è come 'v' ma permette di selezionare dei blocchi simmetrici
 
+'SHIFT - i' permette di inserire davanti a un blocco selezionato quello che si 
+vuole, una volta inserito premere 'ESC' per applicare la modifica
+
 << permette di spostare di un tab opposto la riga corrente
 >> permette di spostare di un tab la riga corrente
 
@@ -195,7 +198,7 @@ con e
 '{' permette di andare al paragrafo precedente
 '}'	//	//	//	//  successivo
 
-'-' permette di andare al primo carattere non spazioe della riga
+'-' permette di andare al primo carattere non spazio della riga
 precedente
 '+' //	//	//	//	//	//	//	successiva
 
@@ -218,7 +221,5 @@ al linguaggio che si sta usando
 
 'CTRL-]' nell' help di vim ti permette di andare alla definizione
 delle parole scritte in blu
-
-'SHIFT - i' permette di inserire davanti a un blocco selezionato quello che si vuole, una volta inserito premere 'ESC' per applicare la modifica
 
 'c' è come 'd' ma una volta cancellato parte la INSERT mode

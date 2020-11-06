@@ -227,8 +227,12 @@ tr permette di "trasformare" il testo cioè ad esempio permette di trasformare
 le maiuscole in minuscole o viceversa oppure attuare delle codificazioni come
 la ROT13 digitando tr a-zA-Z n-za-mN-ZA-M < file_da_codificare/decodificare.
 Permette cioè di effettuare delle translitterazioni tramite pattern fissi.
-(permette di eliminare i caratteri attaccati ripetuti con il parametrp -s
+(permette di eliminare i caratteri attaccati ripetuti con il parametro -s
 caratteri di cui eliminare le "doppie")
+(permette inoltre di rimuovere alcuni caratteri dal testo con 'tr -d <pattern>' 
+dove <pattern> sono i caratteri da eliminare (inoltre se si vuole eliminare il 
+complementare di <pattern> basta aggiungere il parametro -c)) (per i pattern 
+vedi 'man tr')
 
 sed è un "editor di flusso" che permette di filtrare e trasformare testi
 il comando più semplice serve a sostituire una parola con un altra:
@@ -499,7 +503,9 @@ una subshell (!ATTENZIONE! la shebang line non viene utilizzata)
 
 'xmodmap' mostra a che tasti della tastiera corrispondono mod1 ecc.
 
-'!$' è come !! ma solo l'argomento
+'!$ o $_' è come !! ma stampa solo l'ultimo argomento
+
+'!*' stampa tutti gli argomenti del comando precedente
 
 '$RANDOM' contiene un numero random diverso ogni volta che viene chiamato
 
@@ -515,3 +521,20 @@ del file corrente)
 '%' fa riitornare in foreground l'ultimo comando messo in background
 
 'info' è un' altro comando per ricevere informazioni e aiuto su vari comandi
+
+'[[ <expr> ]] && <if_true_expr> || <if_false_expr>' è lo short if della bash
+
+'<(<commands>)' è chiamato Process Substitution (vedi man bash) e può essere 
+sostituito ad un file in un comando (ad esempio diff <(echo <cose a caso>) 
+<(echo <cose a caso>)
+
+'fc' oppure lo shortcut 'ESC v' permette di scrivere comandi multi-linea senza 
+dover creare uno script
+
+'!!/!$:[g]s/<pattern>/<string>/' permette di modificare !! o !$ sostituendo o il
+primo match di <pattern> o tutti i match con 'g', con <string>
+
+'pidof <name>' restituisce i PID del programma <name> 
+
+'pgrep -l <pattern>' restituisce i pid dei programmi il cui nome corrisponde a 
+<pattern> e ne elenca il nome completo
