@@ -12,6 +12,8 @@ per modificare un file digitare :e nome_file
 (possono essere modificati più file contemporaneamente;
 vedi :buffers)
 
+per rimuovere un buffer digitare :bd <buffer_num>
+
 per salvare un file digitare :w (è come save as quindi
 se dopo :w viene digitato un nome, verrà creato un altro file
 ma si continuerà a modificare il file precedente)
@@ -176,7 +178,13 @@ per disattivare temporaneamente fino alla prossima ricerca scrivere :noh
 
 più in generale :set no<opzione> disabilità l'opzione
 
-'CTRL-W' permette di switchare tra le finestre aperte in VIM
+'CTRL-w CTRL-w' permette di switchare tra le finestre aperte in VIM
+
+'CTRL-w v' apre una finestra verticale
+
+'CTRL-w s' apre una finestra orizzontale
+
+'CTRL-w <hjkl>' permette di spostarsi tra le finestre
 
 'CTRL-D' permette di visualizzare le opzioni disponibili quando si sta
 inserendo un comando in VIM (ex. :e CTRL-D mostra i comandi che iniziano

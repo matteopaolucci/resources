@@ -2,7 +2,7 @@ cat serve a stampare sulla console le righe di un file di testo.
 
 dmesg e lspci stampano diverse componenti del tuo pc come le schede di rete ecc.
 in particolare lspci ti fa vedere solo le periferiche attaccate ai bus pci
-è
+ 
 echo xxxx >> xxx.txt permette di creare un file e di inserirci una stringa
 oppure può inserire una nuova riga dentro
 
@@ -12,7 +12,7 @@ echo -n "xxxx" permette di stampare una riga senza andare a capo (utile con
 read nei bash script)
 
 cat >> xxx permette di inserire righe multiple in un file o se non esiste
-lo crea
+lo crea (premere ctrl-d per terminare)
 
 mv xxxx xxxx pertmette di rinominare un file
 
@@ -537,4 +537,6 @@ primo match di <pattern> o tutti i match con 'g', con <string>
 'pidof <name>' restituisce i PID del programma <name> 
 
 'pgrep -l <pattern>' restituisce i pid dei programmi il cui nome corrisponde a 
+
+per sostituire le parentesi quadre con sed usare sed 's/[][]/<replacement>/g'
 <pattern> e ne elenca il nome completo
