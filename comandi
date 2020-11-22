@@ -540,3 +540,13 @@ primo match di <pattern> o tutti i match con 'g', con <string>
 
 per sostituire le parentesi quadre con sed usare sed 's/[][]/<replacement>/g'
 <pattern> e ne elenca il nome completo
+
+'wget \
+     --recursive \ # Download the whole site.
+     --page-requisites \ # Get all assets/elements (CSS/JS/images).
+     --adjust-extension \ # Save files with .html on the end.
+     --convert-links \ # Update links to still work in the static version.
+     --domains yoursite.com \ # Do not follow links outside this domain.
+     --no-parent \ # Don't follow links outside the directory you pass in.
+         yoursite.com/whatever/path # The URL to download '
+permette di scaricare un intero sito
