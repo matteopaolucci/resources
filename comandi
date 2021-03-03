@@ -550,3 +550,6 @@ per sostituire le parentesi quadre con sed usare sed 's/[][]/<replacement>/g'
      --no-parent \ # Don't follow links outside the directory you pass in.
          yoursite.com/whatever/path # The URL to download '
 permette di scaricare un intero sito
+
+'import <name>' permette di fare uno screenshot dell'area selezionata dopo aver
+lanciato il comando, il quale verrà salvato come <name>
