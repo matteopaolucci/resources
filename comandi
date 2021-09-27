@@ -550,3 +550,12 @@ per sostituire le parentesi quadre con sed usare sed 's/[][]/<replacement>/g'
      --no-parent \ # Don't follow links outside the directory you pass in.
          yoursite.com/whatever/path # The URL to download '
 permette di scaricare un intero sito
+
+'ffmpeg -i <input-video> [-ss <start-time>] -to <up-to> -c copy <out-video>'
+permette di troncare un video
+
+'dpkg -L <package>' elenca i file che ha installato il package
+<package>'
+
+'dpkg -c <deb_file>' elenca i file che installerà il file
+<deb_file>'
