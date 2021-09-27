@@ -559,3 +559,6 @@ permette di troncare un video
 
 'dpkg -c <deb_file>' elenca i file che installerà il file
 <deb_file>'
+
+'import <name>' permette di fare uno screenshot dell'area selezionata dopo aver
+lanciato il comando, il quale verrà salvato come <name>
