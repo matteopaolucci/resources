@@ -1,20 +1,21 @@
-cat serve a stampare sulla console le righe di un file di testo.
+'cat' serve a stampare sulla console le righe di un file di testo.
 
-dmesg e lspci stampano diverse componenti del tuo pc come le schede di rete ecc.
+'dmesg' e 'lspci' stampano diverse componenti del tuo pc come le schede di rete 
+ecc.
 in particolare lspci ti fa vedere solo le periferiche attaccate ai bus pci
  
-echo xxxx >> xxx.txt permette di creare un file e di inserirci una stringa
+'echo xxxx >> xxx.txt' permette di creare un file e di inserirci una stringa
 oppure può inserire una nuova riga dentro
 
-echo -e "xxxx" permette di inserire i caratteri speciali \n ecc.
+'echo -e "xxxx"' permette di inserire i caratteri speciali \n ecc.
 
-echo -n "xxxx" permette di stampare una riga senza andare a capo (utile con 
+'echo -n "xxxx"' permette di stampare una riga senza andare a capo (utile con 
 read nei bash script)
 
-cat >> xxx permette di inserire righe multiple in un file o se non esiste
+'cat >> xxx' permette di inserire righe multiple in un file o se non esiste
 lo crea (premere ctrl-d per terminare)
 
-mv xxxx xxxx pertmette di rinominare un file
+'mv xxxx xxxx' pertmette di rinominare un file
 
 find -iname xxxx permette di trovare un file (se si inserisce all'inizio o
 alla fine del file un * verranno trovati i file di cui si ricorda solo
@@ -562,3 +563,10 @@ permette di troncare un video
 
 'import <name>' permette di fare uno screenshot dell'area selezionata dopo aver
 lanciato il comando, il quale verrà salvato come <name>
+
+'rclone' serve ad installare drive e onedrive su linux per poterli navigare 
+da linea di comando
+
+'rclone config' permette di configurare un drive remoto
+
+'rclone mount <name> <dir>' monta la configurazione <name> in <dir>
