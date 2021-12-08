@@ -570,3 +570,6 @@ da linea di comando
 'rclone config' permette di configurare un drive remoto
 
 'rclone mount <name> <dir>' monta la configurazione <name> in <dir>
+
+se si vuole montare uno o più filesystem di rclone all'avvio usare crontab con
+la sintassi '@reboot<TAB>/usr/bin/rclone mount <nomeFileSystem> <cartella>'
