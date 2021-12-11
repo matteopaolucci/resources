@@ -506,6 +506,8 @@ una subshell (!ATTENZIONE! la shebang line non viene utilizzata)
 
 '!$ o $_' è come !! ma stampa solo l'ultimo argomento
 
+'!:<n>' stampa l' n-esimo argomento del precedente comando
+
 '!*' stampa tutti gli argomenti del comando precedente
 
 '$RANDOM' contiene un numero random diverso ogni volta che viene chiamato
