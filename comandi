@@ -578,4 +578,3 @@ la sintassi '@reboot<TAB>/usr/bin/rclone mount <nomeFileSystem> <cartella>'
 
 'journalctl -t sshd' permette di vedere il log degli accessi al server ssh
 
-prova
