@@ -575,3 +575,5 @@ da linea di comando
 
 se si vuole montare uno o più filesystem di rclone all'avvio usare crontab con
 la sintassi '@reboot<TAB>/usr/bin/rclone mount <nomeFileSystem> <cartella>'
+
+'journalctl -t sshd' permette di vedere il log degli accessi al server ssh
