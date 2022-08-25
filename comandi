@@ -583,3 +583,6 @@ la sintassi '@reboot<TAB>/usr/bin/rclone mount <nomeFileSystem> <cartella>'
 installare grub-customizer per modificare il boot order di grub
 
 '<command> | xclip' permette di ridirigere l'output alla clipboard
+
+'ncdu' permette di visualizzare la dimensione dei file/cartelle per ordine
+decrescente
