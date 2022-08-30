@@ -40,6 +40,9 @@ la parola chiave xxxxx
 ps -acx mostra tutti i processi attivi sul computer (ps aux mostra tutte le
 informazioni disponibili su tutti i processi)
 
+'ps <options> --forest' stampa l'albero dei processi di modo che si possa 
+vedere chi a generato i processi figli e che processi figli ha generato il padre
+
 kill xxxx permette di terminare il processo che come numero ha xxxx
 
 ^l ha la stessa funzionalità di clear nel bash
