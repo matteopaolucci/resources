@@ -587,5 +587,11 @@ installare grub-customizer per modificare il boot order di grub
 
 '<command> | xclip' permette di ridirigere l'output alla clipboard
 
+'<command> | wl-copy' permette di ridigirigere l'output alla clipboard
+SU WAYLAND (package wl-clipboard)
+
 'ncdu' permette di visualizzare la dimensione dei file/cartelle per ordine
 decrescente
+
+'pstree -g' stampa i processi in modo gerarchico, di modo che si possa vedere 
+il pid dei processi padre
