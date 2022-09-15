@@ -595,3 +595,6 @@ decrescente
 
 'pstree -g' stampa i processi in modo gerarchico, di modo che si possa vedere 
 il pid dei processi padre
+
+'systemsettings' permette di aprire da terminale la gui delle impostazioni di 
+kde
