@@ -46,6 +46,9 @@ vedere chi a generato i processi figli e che processi figli ha generato il padre
 'ps m -o user,pid,tid,command' mostra tutti i processi attivi con i rispettivi
 thread
 
+'pstree -g' stampa i processi in modo gerarchico, di modo che si possa vedere 
+il pid dei processi padre
+
 kill xxxx permette di terminare il processo che come numero ha xxxx
 
 ^l ha la stessa funzionalità di clear nel bash
@@ -599,12 +602,12 @@ SU WAYLAND (package wl-clipboard)
 'ncdu' permette di visualizzare la dimensione dei file/cartelle per ordine
 decrescente
 
-'pstree -g' stampa i processi in modo gerarchico, di modo che si possa vedere 
-il pid dei processi padre
-
 'systemsettings' permette di aprire da terminale la gui delle impostazioni di 
 kde
 
 'strace <command>' mostra le system call utilizzate da un comando
 
 'ltrace <command>' mostra le funzioni di libreria utilizzate da un comando
+
+'iostat -p ALL' mostra quanto viene usata ciascuna partizione (usare watch per
+vedere la variazione nel tempo)
