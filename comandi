@@ -43,6 +43,9 @@ informazioni disponibili su tutti i processi)
 'ps <options> --forest' stampa l'albero dei processi di modo che si possa 
 vedere chi a generato i processi figli e che processi figli ha generato il padre
 
+'ps m -o user,pid,tid,command' mostra tutti i processi attivi con i rispettivi
+thread
+
 kill xxxx permette di terminare il processo che come numero ha xxxx
 
 ^l ha la stessa funzionalità di clear nel bash
@@ -113,6 +116,9 @@ non di essere cancellati dai non possessori della cartella
 
 top permette di viusalizzare tutti i processi in corso con tutti i dettagli
 e l'output si aggiorna ogni 3 secondi
+
+'top --pid=$(pidof -S , <command>)' permette di monitorare tutti i processi
+generati da un comando (ad esempio firefox necessita di diversi processi)
 
 per far partire un programma e metterlo subito in background si può mettere
 una & dopo il nome del comando/programma. Fatto ciò il terminale ci risponde
@@ -598,3 +604,7 @@ il pid dei processi padre
 
 'systemsettings' permette di aprire da terminale la gui delle impostazioni di 
 kde
+
+'strace <command>' mostra le system call utilizzate da un comando
+
+'ltrace <command>' mostra le funzioni di libreria utilizzate da un comando
