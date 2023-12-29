@@ -619,3 +619,6 @@ file/comando <procide-spec>
 
 'dnf history --reverse' mostra le operazioni effettuate con dnf in ordine
 inverso
+
+'/etc/NetworkManager/system-connections/' contiene le configurazioni
+(con annesse credenziali) di tutte le reti a cui ci si è già connessi 
