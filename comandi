@@ -611,3 +611,11 @@ kde
 
 'iostat -p ALL' mostra quanto viene usata ciascuna partizione (usare watch per
 vedere la variazione nel tempo)
+
+'dnf repoquery -l <package>' mostra i file che conitene il pacchetto <package>
+
+'dnf provides <provide-spec>' mostra che package contiene il
+file/comando <procide-spec>
+
+'dnf history --reverse' mostra le operazioni effettuate con dnf in ordine
+inverso
