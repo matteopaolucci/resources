@@ -639,5 +639,4 @@ connessioni UDP)
 	- iw list: mostra le caratteristiche hardware delle interfacce wireless
 	- iw dev: mostra le interfacce di rete associate all'hardware
 	- iw dev <dev> link: elenca le caratterstiche del dispositivo/rete al 
-quale
-		si è collegati tramite wireless
+		quale si è collegati tramite wireless
