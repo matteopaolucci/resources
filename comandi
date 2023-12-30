@@ -634,3 +634,10 @@ connessioni UDP)
 'ip neigh' stampa la tabella ARP del proprio pc
 
 'ip addr' stampa le interfaccie di rete presenti nel proprio pc
+
+'iw' è il comando che permette di gestire l'interfaccia wireless:
+	- iw list: mostra le caratteristiche hardware delle interfacce wireless
+	- iw dev: mostra le interfacce di rete associate all'hardware
+	- iw dev <dev> link: elenca le caratterstiche del dispositivo/rete al 
+quale
+		si è collegati tramite wireless
