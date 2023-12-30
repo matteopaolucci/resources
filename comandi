@@ -622,3 +622,11 @@ inverso
 
 '/etc/NetworkManager/system-connections/' contiene le configurazioni
 (con annesse credenziali) di tutte le reti a cui ci si è già connessi 
+
+'/etc/services' contiene la corrispondenza tra nome dei servizi e porte
+utilizzate dagli stessi (UDP/TCP)
+
+'netstat -nt' mostra le connessioni TCP attuali (rimpiazzare t con u per le
+connessioni UDP)
+
+'netstat -ntl' mostra le porte TCP sulle quali si è in ascolto
