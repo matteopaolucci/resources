@@ -630,3 +630,7 @@ utilizzate dagli stessi (UDP/TCP)
 connessioni UDP)
 
 'netstat -ntl' mostra le porte TCP sulle quali si è in ascolto
+
+'ip neigh' stampa la tabella ARP del proprio pc
+
+'ip addr' stampa le interfaccie di rete presenti nel proprio pc
