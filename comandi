@@ -640,3 +640,7 @@ connessioni UDP)
 	- iw dev: mostra le interfacce di rete associate all'hardware
 	- iw dev <dev> link: elenca le caratterstiche del dispositivo/rete al 
 		quale si è collegati tramite wireless
+
+'lsof -ni' permette di vedere quali processi stanno utilizzando dei socket
+TCP/UDP (con sudo mostra più processi) (usare -nPi per sostituire al nome del
+servizio, il numero della porta utilizzata)
