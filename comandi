@@ -543,6 +543,9 @@ del file corrente)
 sostituito ad un file in un comando (ad esempio diff <(echo <cose a caso>) 
 <(echo <cose a caso>)
 
+'shift' fa spostare i parametri $1 $2 ... di uno rimuovendo $1 ($2 -> $1, $3 ->
+$2, ...)
+
 'fc' oppure lo shortcut 'ESC v' permette di scrivere comandi multi-linea senza 
 dover creare uno script
 
@@ -644,3 +647,4 @@ connessioni UDP)
 'lsof -ni' permette di vedere quali processi stanno utilizzando dei socket
 TCP/UDP (con sudo mostra più processi) (usare -nPi per sostituire al nome del
 servizio, il numero della porta utilizzata)
+
