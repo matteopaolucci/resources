@@ -650,3 +650,10 @@ servizio, il numero della porta utilizzata)
 
 '<VAR>=$(mktemp)' crea un file temporaneo e ne salva il percorso assoluto all'
 interno di $<VAR>
+
+'<<EOF
+<frasi multilinea>
+...
+EOF'
+permette di passare ad un comando che si aspetta un file, un insieme di righe
+
