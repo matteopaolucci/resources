@@ -67,7 +67,7 @@ comando >> xxx inserisce nel fondo del file xxx il risultato del comando
 
 comando 2> xxx crea il file xxx e ci inserisce lo stderr
 
-XXX = valore permette di impostare una variabile
+'<XXX>=<valore>' permette di impostare una variabile
  
 se si vuole usare il risultato di un comando come argomento per un
 altro comando digitare: "comando $(comando)" oppure: 
@@ -75,6 +75,9 @@ altro comando digitare: "comando $(comando)" oppure:
 come argomento nel secondo comando(se nel risultato del primo comando ci sono
 degli spazi vuoti usare --null subito dopo xargs e poi digitare il resto del
 comando
+'comando | xargs -I <str> comando ... <str>' permette di passare l'argomento 
+al nuovo comando al posto di <str>. In pratica <str> è un placeholder che andrà
+sostituito una volta eseguito il comando
 
 env permette di visualizzare le variabili attive ed i loro valori
 
