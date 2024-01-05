@@ -648,3 +648,5 @@ connessioni UDP)
 TCP/UDP (con sudo mostra più processi) (usare -nPi per sostituire al nome del
 servizio, il numero della porta utilizzata)
 
+'<VAR>=$(mktemp)' crea un file temporaneo e ne salva il percorso assoluto all'
+interno di $<VAR>
