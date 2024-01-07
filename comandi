@@ -641,6 +641,9 @@ connessioni UDP)
 
 'ip addr' stampa le interfaccie di rete presenti nel proprio pc
 
+'host <url>' stampa gli indirizzi ip associati ad un certo URL (simile a
+'dig <url>')
+
 'iw' è il comando che permette di gestire l'interfaccia wireless:
 	- iw list: mostra le caratteristiche hardware delle interfacce wireless
 	- iw dev: mostra le interfacce di rete associate all'hardware
@@ -660,3 +663,37 @@ interno di $<VAR>
 EOF'
 permette di passare ad un comando che si aspetta un file, un insieme di righe
 
+RSYNC:
+	'rsync [-a] <file1/dir1> [<file2/dir2> ...] [user@host:]<destination>'
+	permette di sincronizzare il contenuto di due o più cartelle anche su 
+host
+	remoti (per gli host remoti utilizza ssh)	
+
+	'-a' permette di copiare anche le directory, i permessi, i link 
+simbolici
+	e i dispositivi(e.g. /dev/sda)
+
+	'-n' permetti di mostrare a schermo le operazioni senza effettuarle
+	realmente di solito è utilizzato assieme a '-v' (i.e. '-nv)
+
+	'--delete' effettua una vera e propria sincronizzazione, cioè cancella i
+	le directory e i file nella cartella di destinazione che non sono 
+presenti
+	in <file1/dir1>
+
+	N.B. se una caretella al primo argomento è SENZA slash ('/') verra 
+copiata
+	anche la cartella, mentre se lo slash è presente vengono sincronizzati
+	solo i file all'interno della cartella
+
+	'--bwlimit=<rate>' usato per limitare l'utilizzo di banda di rsync
+
+	'-P' permette di mostrare una barra di progresso e non cancellare file 
+	parzialmente trasferiti(utile se si vuole riprovare in seguito con un
+	utilizzo minore di banda e tempo)
+
+	'--exclude=<PATTERN>' permette di escludere dalla sincronizzazzione i 
+file
+	in <dir1> che soddisfano il pattern <PATTERN> (vedi anche 
+'--exclude-from=',
+	'--include=', '--include-from')
