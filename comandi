@@ -186,6 +186,9 @@ nome_cartella_da_cui_creare_archivio. Per estrarre un archivio è necessario
 digitare tar xf nome_archivio per estrarlo nella cartella corrente
 (per creare o estrarre un archivio compresso mettere j (bzip) o z (gzip) nel
 mezzo tra cf o xf)
+Per elencare i file di un archivio senza estrarli usare 'tar tvf' se il file non
+è compresso altrimenti usare 'tar ztvf' o 'tar jtvf' a seconda del metodo di
+compressione
 
 FILTRI:
 
@@ -666,8 +669,7 @@ permette di passare ad un comando che si aspetta un file, un insieme di righe
 RSYNC:
 	'rsync [-a] <file1/dir1> [<file2/dir2> ...] [user@host:]<destination>'
 	permette di sincronizzare il contenuto di due o più cartelle anche su 
-host
-	remoti (per gli host remoti utilizza ssh)	
+	host remoti (per gli host remoti utilizza ssh)	
 
 	'-a' permette di copiare anche le directory, i permessi, i link 
 simbolici
@@ -693,7 +695,6 @@ copiata
 	utilizzo minore di banda e tempo)
 
 	'--exclude=<PATTERN>' permette di escludere dalla sincronizzazzione i 
-file
-	in <dir1> che soddisfano il pattern <PATTERN> (vedi anche 
-'--exclude-from=',
-	'--include=', '--include-from')
+	file in <dir1> che soddisfano il pattern <PATTERN> (vedi anche 
+	'--exclude-from=', '--include=', '--include-from')
+
