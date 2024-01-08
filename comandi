@@ -24,6 +24,8 @@ file trovato) ';' permette di eseguire il comando sul file trovato)
 (-delete permette di eliminare il/i file trovati !ATTENZIONE!)
 (se si deve inserire il risultato come parametro in un altro comando
 usare -fprint0 dopo tutto il comando)
+(usare "-not -path '<dir>/*'" per escludere dalla ricerca i file contenuti in
+<dir>)
 
 rm -rf permette di rimuovere qualsiasi file o cartella contenente files
 
@@ -212,7 +214,7 @@ preceduto da un identificatore generico[[:alpha:]][0-9])
 
 per filtrare con less digitare /filtro
 
-per filtrare conf find digitare find -regex "filtro" 
+per filtrare con find digitare find -regex "filtro" 
 
 FINE FILTRI
 
